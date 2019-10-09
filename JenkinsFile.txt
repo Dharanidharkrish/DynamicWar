@@ -14,9 +14,8 @@ pipeline {
        stage('deploy'){
         steps{
             
-           sh 'cp  varlibjenkinsworkspaceDeployPipelinetargetjava-tomcat-maven-example.war apache-tomcat-9.0.26webapps'
+           deploy adapters: [tomcat8(credentialsId: 'TomcatUser', path: '', url: 'http://18.189.1.38:8090')], contextPath: 'DynamicWar', onFailure: false, war: '**/*.war'
         }
-       
        }
-	}
+    }
 }
