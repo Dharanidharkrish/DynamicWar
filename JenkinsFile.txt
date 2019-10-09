@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+   
+    stages {
+
+      stage('clean')
+            {
+                steps
+                 { 
+                    sh 'mvn clean package'
+                 }
+            }
+       
+       stage('deploy'){
+        steps{
+            
+           sh 'cp  varlibjenkinsworkspaceDeployPipelinetargetjava-tomcat-maven-example.war apache-tomcat-9.0.26webapps'
+        }
+       
+       }
+	}
+}
