@@ -11,7 +11,7 @@
 	<groupId>com.telusko</groupId>
 	<artifactId>bootjpa</artifactId>
 	<version>1.0.0</version>
-    <packaging>war</packaging>
+   
 	<name>bootjpa</name>
 	<description>Demo project for Spring Boot</description>
 
